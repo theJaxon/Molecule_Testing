@@ -21,11 +21,12 @@ fi
 echo "[TASK 2] Install docker"
 yum repolist 
 yum install -y docker-ce
+systemctl enable --now docker
+
+# Check if docker service was successfully activated
+systemctl is-active docker
 
 if [ $? -eq 0 ]; then 
 # Add current user to docker group
 usermod -aG docker $USER 
-
-# Enable docker service
-systemctl enable --now docker
 fi
