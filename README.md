@@ -55,7 +55,7 @@ mol converge
 ### Debugging 
 ```yaml
 # Print ansible facts related to the container 
-- name: Add Consul Repository
+- name: Display ansible facts
   debug: var=ansible_facts
 ```
 
