@@ -1,0 +1,16 @@
+advertise_addr = "{{  ansible_facts['default_ipv4']['address'] }}"
+bootstrap_expect=1
+bind_addr = "0.0.0.0"
+client_addr = "0.0.0.0"
+datacenter = "consul-dc"
+data_dir = "/opt/consul"
+
+server = true
+
+ui_config {
+  enabled = true
+}
+
+ports {
+  http = 8500
+}

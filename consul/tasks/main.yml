@@ -1,0 +1,23 @@
+---
+- name: Include tasks based on the operating system
+  become: True 
+  block:
+  - include_tasks: "install-{{ ansible_facts['os_family'] }}.yml"
+
+- name: Install Consul
+  package:
+    name: consul
+    state: present
+
+- name: Create Consul Config file 
+  template:
+    src: consul.hcl.j2
+    dest: /etc/consul.d/consul.hcl
+  notify: 
+  - Restart Consul
+
+- name: Start and Enable Consul Service 
+  service:
+    name: consul
+    state: started 
+    enabled: true
