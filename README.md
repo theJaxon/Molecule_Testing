@@ -52,11 +52,16 @@ mol login -h <name>
 mol converge
 ```
 
-### Debugging 
+### Facts Gathering 
 ```yaml
 # Print ansible facts related to the container 
 - name: Display ansible facts
   debug: var=ansible_facts
+```
+
+```bash
+# Adhoc setup module with filter
+ansible <host> -m setup -a "filter=default_ipv4" -u vagrant
 ```
 
 ### Useful resources
