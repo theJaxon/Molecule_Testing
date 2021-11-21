@@ -64,6 +64,19 @@ mol converge
 ansible <host> -m setup -a "filter=default_ipv4" -u vagrant
 ```
 
+### [Working with Inventory](https://blog.emedeiros.me/archives/2019/09/20/molecule-working-with-inventory.html) 
+```yaml
+vi molecule/default/molecule.yml
+
+provisioner:
+  name: ansible
+  inventory:
+    links:
+      # The file being refernced is located in molecule/default/inventory
+      hosts: inventory
+```
+
+
 ### Useful resources
 - [Testing with Ansible Molecule - theurbanpenguin](https://www.youtube.com/watch?v=e3FFxKsfdSo)
 - [Test Ansible Roles using Molecule and Podman](https://redhatnordicssa.github.io/test-ansible-role-molecule-podman)
