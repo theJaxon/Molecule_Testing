@@ -9,7 +9,7 @@ data_dir = "/opt/consul"
 log_file = "/etc/consul/logs/"
 log_level = "DEBUG"
 
-{% if is_server %}
+{% if is_server == 'true' %}
 server = true
 ui_config {
   enabled = true
