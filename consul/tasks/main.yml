@@ -9,6 +9,13 @@
     name: consul
     state: present
 
+- name: Create logs directory 
+  file:
+    state: directory 
+    path: /etc/consul/logs/
+    owner: consul
+    group: consul
+
 - name: Create Consul Config file 
   template:
     src: consul.hcl.j2

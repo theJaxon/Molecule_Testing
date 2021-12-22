@@ -1,5 +1,4 @@
 advertise_addr = "{{  ansible_facts['default_ipv4']['address'] }}"
-bootstrap_expect=1
 bind_addr = "0.0.0.0"
 client_addr = "0.0.0.0"
 datacenter = "consul-dc"
@@ -10,6 +9,7 @@ log_file = "/etc/consul/logs/"
 log_level = "DEBUG"
 
 {% if is_server == 'true' %}
+bootstrap_expect=1
 server = true
 ui_config {
   enabled = true
