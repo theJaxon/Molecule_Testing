@@ -80,6 +80,7 @@ provisioner:
 ### Useful resources
 - [Testing with Ansible Molecule - theurbanpenguin](https://www.youtube.com/watch?v=e3FFxKsfdSo)
 - [Test Ansible Roles using Molecule and Podman](https://redhatnordicssa.github.io/test-ansible-role-molecule-podman)
+- [Using Molecule for Testing Ansible Roles](https://rdbreak.com/?p=164)
 - Containers used with Molecule for testing
   - [geerlingguy/docker-centos8-ansible](https://github.com/geerlingguy/docker-centos8-ansible)
   - [geerlingguy/docker-ubuntu2004-ansible](https://github.com/geerlingguy/docker-ubuntu2004-ansible)
