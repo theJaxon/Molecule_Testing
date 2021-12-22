@@ -9,11 +9,15 @@ data_dir = "/opt/consul"
 log_file = "/etc/consul/logs/"
 log_level = "DEBUG"
 
+{% if is_server %}
 server = true
-
 ui_config {
   enabled = true
 }
+{% else %}
+server = false 
+retry_join = ["provider=aws tag_key=is_server tag_value=true"]
+{% endif %}
 
 ports {
   http = 8500

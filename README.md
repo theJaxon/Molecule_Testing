@@ -50,6 +50,10 @@ mol login -h <name>
 
 # Configures the instances as desired
 mol converge
+
+# Converge with additional args
+mol converge -- --extra-vars="is_server=false"
+
 ```
 
 ### Facts Gathering 
@@ -75,6 +79,8 @@ provisioner:
       # The file being refernced is located in molecule/default/inventory
       hosts: inventory
 ```
+
+---
 
 
 ### Useful resources

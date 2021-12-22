@@ -5,14 +5,14 @@ driver:
   name: podman
 platforms:
   - name: centos
-    image: geerlingguy/docker-centos8-ansible
+    image: geerlingguy/docker-centos8-ansible@sha256:2c68ba7f24002832367a1f1b6b118a1d8a9a8e3a44a899bdcf90590b54109f5d
     pre_build_image: true
     privileged: true
     volumes:
     - /sys/fs/cgroup:/sys/fs/cgroup:ro
     command: "/usr/sbin/init"
   - name: ubuntu  
-    image: geerlingguy/docker-ubuntu2004-ansible
+    image: geerlingguy/docker-ubuntu2004-ansible@sha256:b997adbb20d100481466883433852021dd64b487c16078c9cde51ea39a9a72cc
     pre_build_image: true
     privileged: true
     volumes:
